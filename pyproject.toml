@@ -1,0 +1,60 @@
+[project]
+name = "veo-analytics"
+version = "1.0.0"
+description = "Sports Analytics System for Veo"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = {text = "MIT"}
+
+dependencies = [
+    # Core CV/ML
+    "opencv-python>=4.8.0",
+    "opencv-contrib-python>=4.8.0",
+    "numpy>=1.24.0,<2.0.0",
+    "scipy>=1.11.0",
+    "scikit-learn>=1.3.0",
+    "pandas>=2.1.0",
+    # Deep Learning
+    "torch>=2.1.0",
+    "torchvision>=0.16.0",
+    "tensorflow>=2.14.0",
+    "ultralytics>=8.0.0",
+    # Video/Image Processing
+    "pillow>=10.0.0",
+    "imageio>=2.31.0",
+    "imageio-ffmpeg>=0.4.0",
+    # API/Web
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.4.0",
+    # Utils
+    "pyyaml>=6.0.0",
+    "click>=8.1.0",
+    "tqdm>=4.66.0",
+    "matplotlib>=3.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.10.0",
+    "ruff>=0.1.0",
+    "jupyter>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# FIX: Explicitně říct hatchling kde jsou source files
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
