@@ -293,9 +293,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [OpenCV](https://opencv.org/) community
 - Sports analytics research community
 
-## 📧 Contact
-
-For questions or collaboration: your.email@example.com
-
 ---
 *Built with ❤️ for sports analytics enthusiasts*
